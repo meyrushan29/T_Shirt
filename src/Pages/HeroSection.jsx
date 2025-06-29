@@ -1,5 +1,18 @@
 import React from 'react';
-import { Check, Phone, MessageCircle } from 'lucide-react';
+import { 
+  Check, 
+  Phone, 
+  MessageCircle, 
+  Star, 
+  Facebook, 
+  Instagram, 
+  Twitter, 
+  Youtube, 
+  ArrowRight, 
+  MapPin, 
+  Mail, 
+  Clock 
+} from 'lucide-react';
 
 
 const HeroSection = () => {
@@ -163,7 +176,156 @@ const HeroSection = () => {
 
       {/* Bottom Decorative Wave */}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-red-600/20 to-transparent"></div>
-    </div>
+        <div className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              
+              {/* Company Info */}
+              <div className="lg:col-span-1">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent mb-4">
+                    Premium Sportswear
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Leading manufacturer of high-quality sportswear in Sri Lanka. We specialize in custom jerseys, team uniforms, and athletic apparel for universities, schools, companies, and sports teams.
+                  </p>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-sm text-gray-400 ml-2">4.9/5 Customer Rating</span>
+                  </div>
+                </div>
+                
+                {/* Social Media */}
+                <div>
+                  <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+                  <div className="flex space-x-4">
+                    <a href="#" className="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-200 transform hover:scale-110">
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition-colors duration-200 transform hover:scale-110">
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="w-10 h-10 bg-blue-400 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors duration-200 transform hover:scale-110">
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="w-10 h-10 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-colors duration-200 transform hover:scale-110">
+                      <Youtube className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+                <ul className="space-y-3">
+                  {[
+                    'Home',
+                    'About Us',
+                    'Our Products',
+                    'Custom Orders',
+                    'Bulk Orders',
+                    'Gallery',
+                    'Testimonials',
+                    'Contact Us'
+                  ].map((link, index) => (
+                    <li key={index}>
+                      <a href="#" className="text-gray-300 hover:text-red-500 transition-colors duration-200 flex items-center group">
+                        <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200 mr-2" />
+                        <span className="group-hover:translate-x-1 transition-transform duration-200">{link}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Products & Services */}
+              <div>
+                <h4 className="text-lg font-semibold mb-6">Products & Services</h4>
+                <ul className="space-y-3">
+                  {[
+                    'Sports Jerseys',
+                    'Team Uniforms',
+                    'Track Suits',
+                    'School Uniforms',
+                    'Corporate Wear',
+                    'Custom Designs',
+                    'Bulk Manufacturing',
+                    'International Shipping'
+                  ].map((service, index) => (
+                    <li key={index}>
+                      <a href="#" className="text-gray-300 hover:text-red-500 transition-colors duration-200 flex items-center group">
+                        <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <span className="group-hover:translate-x-1 transition-transform duration-200">{service}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Contact Information */}
+              <div>
+                <h4 className="text-lg font-semibold mb-6">Contact Information</h4>
+                <div className="space-y-4">
+                  
+                  {/* Address */}
+                  <div className="flex items-start space-x-3 p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors duration-200">
+                    <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="font-medium text-white">Our Location</div>
+                      <div className="text-sm text-gray-300">123 Industrial Zone<br />Colombo 10, Sri Lanka</div>
+                    </div>
+                  </div>
+
+                  {/* Phone Numbers */}
+                  <div className="flex items-start space-x-3 p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors duration-200">
+                    <Phone className="w-5 h-5 text-blue-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="font-medium text-white">Phone Numbers</div>
+                      <div className="text-sm text-gray-300">
+                        <div>+94 23 22 22 220</div>
+                        <div>+94 71 99 99 989 (WhatsApp)</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-start space-x-3 p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors duration-200">
+                    <Mail className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="font-medium text-white">Email Address</div>
+                      <div className="text-sm text-gray-300">
+                        <div>info@premiumsportswear.lk</div>
+                        <div>orders@premiumsportswear.lk</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Business Hours */}
+                  <div className="flex items-start space-x-3 p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors duration-200">
+                    <Clock className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="font-medium text-white">Business Hours</div>
+                      <div className="text-sm text-gray-300">
+                        <div>Mon - Fri: 8:00 AM - 6:00 PM</div>
+                        <div>Saturday: 8:00 AM - 4:00 PM</div>
+                        <div>Sunday: Closed</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+      </div>
+   
   );
 };
 
