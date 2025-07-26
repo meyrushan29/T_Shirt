@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [showGetStarted, setShowGetStarted] = useState(true);
 
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -41,7 +42,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a
-                href="#"
+                href="/collection"
                 className="text-gray-700 hover:text-red-500 px-3 py-2 text-sm font-medium transition-colors duration-200 uppercase tracking-wide"
               >
                 Collections
